@@ -16,6 +16,10 @@
             margin-top: 40px;
         }
 
+        #image {
+            display: block;
+        }
+
         .card {
             border-width: 3px;
         }
@@ -31,13 +35,14 @@
 </head>
 
 <body>
-    <main class="container-fluid">
+    <main class="container-fluid" id="main">
         <div class="row">
             <div class="col col-lg-2"></div>
             <div class="col-lg-8">
                 <div class="jumbotron">
-                    <h1 class="display-3 text-center">Sustainable Sushi</h1>
-                    <p class="lead">Sustainable sushi is made from fished or farmed sources that can be effectively
+                    <h1 class="display-3 text-center" id="title">Sustainable Sushi</h1>
+                    <p id="tribute-info" class="lead">Sustainable sushi is made from fished or farmed sources that can
+                        be effectively
                         maintained or can be
                         aquired without harming the ecosystem and environment. Growing concerns for environmental
                         responsibility,
@@ -46,11 +51,13 @@
                         in restaraunts across the world.
                     </p>
                     <div class="img-thumbnail">
-                        <img src="./main-tribute.jpg" id="head-img" class="img-fluid"
-                            alt="Nigiri sushi made from sustanable fish">
-                        <div class="caption text-center">
-                            Nigiri sushi made with ingredients aquired from sustainable sources.
-                            <br>Photo courtesy of <a href="https://jason.green/" target="_blank">Jason Green</a>.
+                        <div id="img-div">
+                            <img src="./main-tribute.jpg" id="image" class="img-fluid"
+                                alt="Nigiri sushi made from sustanable fish">
+                            <fig id="img-caption" class="caption text-center">
+                                Nigiri sushi made with ingredients aquired from sustainable sources.
+                                <br>Photo courtesy of <a href="https://jason.green/" target="_blank">Jason Green</a>.
+                            </fig>
                         </div>
                     </div>
                     <br>
@@ -123,7 +130,7 @@
                                 flavors
                                 of the ocean. </p>
                             <p>For a more current and updated list of sustainable fish to enjoy, check out the <a
-                                    href="http://www.seafoodwatch.org/seafood-recommendations/sushi"
+                                    id="tribute-link" href="http://www.seafoodwatch.org/seafood-recommendations/sushi"
                                     target="_blank">Seafood Watch Program</a>.</p>
                         </div>
                     </div>
@@ -132,7 +139,6 @@
             <div class="col col-lg-2"></div>
         </div>
     </main>
-
     <footer>
         <p class="text-center">Coded by <a href="http://jason.green">Jason Green</a></p>
     </footer>
