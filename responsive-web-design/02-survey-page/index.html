@@ -16,6 +16,61 @@
 </head>
 
 <body>
+    <header>
+      <h1 id="title">Website Survey</h1>
+      <p id="description">What do you think of my website <a href="https://jason.green" target="_blank">jason.green</a>? I'd like to hear from you! <br>
+                          Please take a moment to fill out this survey.
+      </p>
+    </header>
+    <main>
+        <form id="survey-form">
+          <div class="field">
+          <label id="name-label" for="name">Name</label>
+          <input id="name" type="text" name="name" placeholder="Your Name" required>
+          </div>
+          <div class="field">
+          <label id="email-label" for="email">E-mail</label>
+          <input id="email" type="email" name="email" placeholder="Your E-mail" required>
+          </div>
+          <div class="field">
+          <label id="number-label" for="number">Age</label>
+          <input id="number" type="number" name="age" placeholder="Your Age" min="3" max="110">
+          </div>
+          <div class="field">
+          <label id="role-label" for="dropdown">Role</label>
+          <select id="dropdown" name="role" required>
+            <option disabled selected value="" >Your role</option>
+            <option value="student">Student</option>
+            <option value="recruiter">Recruiter</option>
+            <option value="other">Friend</option>
+            <option value="other">Other</option>
+            <option value="noresponse">Prefer not to say</option>
+          </select>
+          </div>
+          <div class="field">
+          <label>How impressed are you with the website?</label>
+          <label><input type="radio" name="userImpressed" value="veryImpressed" checked>Very impressed!</label>
+          <label><input type="radio" name="userImpressed" value="good">It's pretty good</label>
+          <label><input type="radio" name="userImpressed" value="needswork">It needs work</label>
+          </div>
+          <div class="field">
+          <label id="improve">What should I focus on improving? (Check as many as you like)</label>
+          <label><input type="checkbox" name="improve" value="layout">Layout is confusing</label>
+          <label><input type="checkbox" name="improve" value="colors">Color theme is distracting</label>
+          <label><input type="checkbox" name="improve" value="portfolio">Portfolio needs work</label>
+          <label><input type="checkbox" name="improve" value="content">Needs more content</label>
+          </div>
+          <div class="field">
+          <label for="comments">Add any additional comments</label>
+          <textarea id="comments" name="comments" ></textarea>
+          </div>
+          <input id="submit" type="submit" value="Submit">
+        </form>
+    </main>
+    <footer>
+      <p>Coded by <a href="https://jason.green" rel="author">Jason Green</a></p>
+    </footer>
       <script src="./js/materialize.min.js"></script>
+      <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </body>
 </html>
