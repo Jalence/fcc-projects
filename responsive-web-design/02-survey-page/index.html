@@ -1,76 +1,93 @@
 <!doctype html>
 
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
 
   <title>jason.green | Survey Page</title>
   <meta name="description" content="Survey Page project for freeCodeCamp">
   <meta name="author" content="Jason Green">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link type="text/css" rel="stylesheet" href="./css/materialize.min.css" media="screen">
-  <link type="text/css" rel="stylesheet" href="./css/styles.css" media="screen">
+  <link type="text/css" rel="stylesheet" href="./css/main.css" media="screen">
 </head>
 
 <body>
-    <header>
-      <h1 id="title">Website Survey</h1>
-      <p id="description">What do you think of my website <a href="https://jason.green" target="_blank">jason.green</a>? I'd like to hear from you! <br>
-                          Please take a moment to fill out this survey.
-      </p>
-    </header>
-    <main>
-        <form id="survey-form">
-          <div class="field">
-          <label id="name-label" for="name">Name</label>
-          <input id="name" type="text" name="name" placeholder="Your Name" required>
-          </div>
-          <div class="field">
-          <label id="email-label" for="email">E-mail</label>
-          <input id="email" type="email" name="email" placeholder="Your E-mail" required>
-          </div>
-          <div class="field">
-          <label id="number-label" for="number">Age</label>
-          <input id="number" type="number" name="age" placeholder="Your Age" min="3" max="110">
-          </div>
-          <div class="field">
-          <label id="role-label" for="dropdown">Role</label>
-          <select id="dropdown" name="role" required>
-            <option disabled selected value="" >Your role</option>
-            <option value="student">Student</option>
-            <option value="recruiter">Recruiter</option>
-            <option value="other">Friend</option>
-            <option value="other">Other</option>
-            <option value="noresponse">Prefer not to say</option>
-          </select>
-          </div>
-          <div class="field">
-          <label>How impressed are you with the website?</label>
-          <label><input type="radio" name="userImpressed" value="veryImpressed" checked>Very impressed!</label>
-          <label><input type="radio" name="userImpressed" value="good">It's pretty good</label>
-          <label><input type="radio" name="userImpressed" value="needswork">It needs work</label>
-          </div>
-          <div class="field">
-          <label id="improve">What should I focus on improving? (Check as many as you like)</label>
-          <label><input type="checkbox" name="improve" value="layout">Layout is confusing</label>
-          <label><input type="checkbox" name="improve" value="colors">Color theme is distracting</label>
-          <label><input type="checkbox" name="improve" value="portfolio">Portfolio needs work</label>
-          <label><input type="checkbox" name="improve" value="content">Needs more content</label>
-          </div>
-          <div class="field">
-          <label for="comments">Add any additional comments</label>
-          <textarea id="comments" name="comments" ></textarea>
-          </div>
-          <input id="submit" type="submit" value="Submit">
-        </form>
-    </main>
-    <footer>
-      <p>Coded by <a href="https://jason.green" rel="author">Jason Green</a></p>
-    </footer>
-      <script src="./js/materialize.min.js"></script>
-      <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+  <header>
+    <h2 id="title">Website Survey</h2>
+    <p id="description">What do you think of my website, <a href="https://jason.green" target="_blank" >jason.green</a>?
+      I'd like to hear from you! <br>
+      Please take a moment to fill out this survey.
+    </p>
+  </header>
+  <main>
+    <div class="container">
+      <div class="row">
+        <div class="col s0 m1 l2"></div>
+        <div class="col s12 m10 l8 z-depth-5 main-content">
+          <form id="survey-form" action="#">
+            <div class="input-field">
+              <label id="name-label" for="name">Name</label>
+              <input id="name" class="validate" type="text" name="name" placeholder="Your Name" required>
+            </div>
+            <div class="input-field">
+              <label id="email-label" for="email">E-mail</label>
+              <input id="email" class="validate" type="email" name="email" placeholder="Your E-mail" required>
+              <span class="helper-text" data-error="E-mail appears to be formatted wrong "></span>
+            </div>
+            <div class="input-field">
+              <label id="number-label" for="number">Age</label>
+              <input id="number" class="validate" type="number" name="age" placeholder="Your Age" min="3" max="110">
+              <span class="helper-text" data-error="Please input a valid number "></span>
+            </div>
+            <label id="role-label" for="dropdown">Role</label>
+            <select id="dropdown" name="role" class="browser-default" required>
+              <option disabled selected value="">Your role</option>
+              <option value="student">Student</option>
+              <option value="recruiter">Recruiter</option>
+              <option value="other">Friend</option>
+              <option value="other">Other</option>
+              <option value="noresponse">Prefer not to say</option>
+            </select>
+            <div class="radio-field">
+              <label>How impressed are you with the website?</label>
+              <p><label><input type="radio" name="userImpressed" class="with-gap" value="veryImpressed" checked><span>Very
+                    impressed!</span></label></p>
+              <p><label><input type="radio" name="userImpressed" class="with-gap" value="good"><span>It's pretty
+                    good</span></label></p>
+              <p><label><input type="radio" name="userImpressed" class="with-gap" value="needswork"><span>It needs
+                    work</span></label></p>
+            </div>
+            <div class="checkbox-field">
+              <label id="improve">What should I focus on improving? (Check as many as you like)</label>
+              <p><label><input type="checkbox" name="improve" class="filled-in" value="layout"><span>Layout is
+                    confusing</span></label></p>
+              <p><label><input type="checkbox" name="improve" class="filled-in" value="colors"><span>Color theme is
+                    distracting</span></label></p>
+              <p><label><input type="checkbox" name="improve" class="filled-in" value="portfolio"><span>Portfolio needs
+                    work</span></label></p>
+              <p><label><input type="checkbox" name="improve" class="filled-in" value="content"><span>Needs more
+                    content</span></label></p>
+            </div>
+            <div class="input-field">
+              <label for="comments">Any additional comments</label>
+              <textarea id="comments" name="comments" class="materialize-textarea" placeholder="Type any additional comments"></textarea>
+            </div>
+            <input class="btn" id="submit" type="submit" value="Submit">
+          </form>
+        </div>
+        <div class="col s0 m1 l2"></div>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <p>Coded by <a href="https://jason.green" rel="author">Jason Green</a></p>
+  </footer>
+  <script src="./js/materialize.min.js"></script>
 </body>
+
 </html>

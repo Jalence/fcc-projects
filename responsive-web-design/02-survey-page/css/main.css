@@ -1,3 +1,55 @@
 * {
  font-family: 'Roboto', sans-serif;
 }
+
+body {
+
+ background-image: url('../background.jpg');
+  background-size: auto;
+  background-position: top;
+  background-repeat: repeat-x;
+  background-size:auto;
+}
+header {
+ text-align: center;
+ height: 250px;
+ padding-top: 1px;
+ margin-bottom: -60px;
+ background-color: rgb(224, 242, 241, 0.9);
+
+}
+
+.checkbox-field{
+ margin-bottom: 25px;
+}
+
+footer{
+ text-align: center;
+ margin-top:50px;
+}
+
+.main-content{
+ background-color:white;
+ border-radius: 10px;
+}
+
+form{
+ padding: 15px;
+}
+
+label{
+ font-size: 1.25rem !important;
+ color: #37474f !important;
+ font-weight:  bold;;
+}
+
+p > label {
+ font-weight: normal;
+}
+
+select{
+ margin-bottom: 15px;
+}
+.input-field{
+ margin-bottom: 25px;
+}
