@@ -8,15 +8,88 @@
   <meta name="description" content="Jason's Green Teas">
   <meta name="author" content="Jason Green">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
 
-  <link rel="stylesheet" href="css/styles.css">
+   header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    display: inline-flex;
+    justify-content: space-between;
+    padding-left:20px;
+    padding-right: 20px;
+   }
 
+   body {
+    padding-top: 150px;
+    padding: 150px 20px 20px 20px;
+   }
+
+   nav > ul {
+    display: flex;
+   }
+   
+
+   /* Media Break points */
+   @media (min-width: 576px) { 
+    main{
+     width: 100%;
+     margin-left: 0%;
+     margin-right: 0%;
+    }
+   }
+
+   @media (min-width: 768px) { 
+    main{
+     width: 90%;
+     margin-left: 5%;
+     margin-right: 5%;
+    } 
+   }
+
+   @media (min-width: 992px) { 
+     main{
+      width: 80%;
+      margin-left: 10%;
+      margin-right: 10%;
+     }
+     
+   }
+
+   @media (min-width: 1200px) { 
+     main{
+      width: 60%;
+      margin-left: 20%;
+      margin-right: 20%;
+     }
+    }
+  </style>
 </head>
 
 <body>
-  <header>
+  <header id="header">
+   <img id="header-img" src="https://via.placeholder.com/250x65?text=00+Logo" alt="Logo Image">
+   <nav id="nav-bar">
+    <ul id="nav-links">
+     <li><a class="nav-link" href="#intro">Link # 1</a></li>
+     <li><a class="nav-link" href="#packages">Link # 2</a></li>
+     <li><a class="nav-link" href="#pricing">Link # 3</a></li>
+    </ul>
+   </nav>
   </header>
   <main>
+   <div id="intro" class="section">
+    <form id="form" action="https://www.freecodecamp.com/email-submit" method="GET">
+     <input id="email" type="email" name="email" placeholder="Enter E-Mail">
+     <input id="submit" type="submit" value="submit"></input>
+    </form>
+   </div>
+   <div id="packages" class="section">
+    <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/Tai5VvZAitE" frameborder="0" allowfullscreen></iframe>
+   </div>
+   <div id="pricing" class="section"></div>
   </main>
   <footer>
   </footer>
